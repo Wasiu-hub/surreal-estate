@@ -3,13 +3,19 @@
 /* eslint-disable react/jsx-filename-extension */
 /* eslint-disable quotes */
 import "../styles/App.css";
+import { Routes, Route } from "react-router-dom";
 import NavBar from "./NavBar";
+import Properties from "./Properties";
+import AddProperty from "./AddProperty";
 
 function App() {
   return (
     <>
       <NavBar />
-      <h2>Surreal Estate</h2>;
+      <Routes>
+        <Route path="/" element={<Properties />} />
+        <Route path="/add-property" element={<AddProperty />} />
+      </Routes>
     </>
   );
 }
