@@ -1,0 +1,10 @@
+.navbar {
+  background-color: white;
+  border-bottom: gray;
+}
+
+.navbar-links-item {
+  margin: 0;
+  padding: 10px;
+  display: inline-block;
+}

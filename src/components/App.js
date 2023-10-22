@@ -3,9 +3,15 @@
 /* eslint-disable react/jsx-filename-extension */
 /* eslint-disable quotes */
 import "../styles/App.css";
+import NavBar from "./NavBar";
 
 function App() {
-  return <h2>Surreal Estate</h2>;
+  return (
+    <>
+      <NavBar />
+      <h2>Surreal Estate</h2>;
+    </>
+  );
 }
 
 export default App;
