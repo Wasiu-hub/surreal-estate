@@ -10,13 +10,13 @@ import AddProperty from "./AddProperty";
 
 function App() {
   return (
-    <>
+    <div className="App">
       <NavBar />
       <Routes>
         <Route path="/" element={<Properties />} />
         <Route path="/add-property" element={<AddProperty />} />
       </Routes>
-    </>
+    </div>
   );
 }
 
