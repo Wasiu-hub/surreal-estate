@@ -1,10 +1,21 @@
 .navbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
   background-color: white;
   border-bottom: gray;
 }
 
+.logo {
+  width: 15%;
+}
 .navbar-links-item {
   margin: 0;
   padding: 10px;
   display: inline-block;
+}
+
+.item {
+  text-decoration: none;
+  color: black;
 }

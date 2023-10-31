@@ -6,13 +6,13 @@ import "../styles/add-property.css";
 const AddProperty = () => {
   const initialState = {
     fields: {
-      bathroom: "1",
-      bedroom: "2",
-      city: "Manchester",
-      email: "email@yahoo.com",
-      price: "1000",
-      title: " 2 bed flat",
-      type: "Flat",
+      title: "",
+      type: "",
+      bedroom: "",
+      bathroom: "",
+      price: "",
+      city: "",
+      email: "",
     },
   };
 
@@ -32,15 +32,16 @@ const AddProperty = () => {
       Add Property Page
       <form onSubmit={handleAddProperty}>
         <label htmlFor="title">
-          Title
+          Property Title
           <input
-            placeholder="How many bed(s)"
+            placeholder="How many bedroom(s)"
             id="title"
             name="title"
             value={fields.title}
             onChange={handleFieldChange}
           />
         </label>
+
         <label htmlFor="city">
           City
           <select
@@ -66,12 +67,56 @@ const AddProperty = () => {
           >
             <option value="Flat">Flat</option>
             <option value="Detached">Detached</option>
-            <option value="Semi-Detached">ShefSemi-Detached</option>
+            <option value="Semi-Detached">Semi-Detached</option>
             <option value="Terraced">Terraced</option>
-            <option value="End of Terrace">End of Terrace</option>
+            <option value="End-of-Terrace">End-of-Terrace</option>
             <option value="Cottage">Cottage</option>
             <option value="Bungalow">Bungalow</option>
           </select>
+        </label>
+
+        <label htmlFor="bedrooms">
+          Bedrooms
+          <input
+            placeholder=""
+            id="bedroom"
+            name="bedroom"
+            value={fields.bedroom}
+            onChange={handleFieldChange}
+          />
+        </label>
+
+        <label htmlFor="bathrooms">
+          Bathrooms
+          <input
+            placeholder=""
+            id="bathroom"
+            name="bathroom"
+            value={fields.bathroom}
+            onChange={handleFieldChange}
+          />
+        </label>
+
+        <label htmlFor="price">
+          Price
+          <input
+            placeholder="amount"
+            id="price"
+            name="price"
+            value={fields.price}
+            onChange={handleFieldChange}
+          />
+        </label>
+
+        <label htmlFor="email">
+          Email
+          <input
+            placeholder="was@yahoo.com"
+            id="email"
+            name="email"
+            value={fields.email}
+            onChange={handleFieldChange}
+          />
         </label>
 
         <button type="submit">Add</button>

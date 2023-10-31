@@ -3,12 +3,12 @@
 import React from "react";
 import "../styles/navbar.css";
 import { Link } from "react-router-dom";
-import image from "../resources/estate.png";
+import logo from "../resources/logo.png";
 
 const NavBar = () => {
   return (
     <div className="navbar">
-      <img src={image} alt="estate-logo" />
+      <img className="logo" src={logo} alt="estate-logo" />
 
       <ul className="navbar-links">
         <li className="navbar-links-item">

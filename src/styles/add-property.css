@@ -1,7 +1,40 @@
 .add-property {
-  padding: 10px;
+  margin-top: 30px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-weight: bold;
+}
+
+form {
+  background-color: rgba(27, 27, 50, 0.8);
+  width: 40%;
+  height: 80%;
+  margin: 2rem auto;
+  padding: 2rem;
+  color: white;
 }
 
 label {
-  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto 1.2rem auto;
+  padding: 0.25rem;
+}
+
+input,
+select {
+  width: 50%;
+  height: 40px;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+button {
+  width: 20%;
+  color: white;
+  background-color: green;
+  border: 1px solid green;
+  margin-bottom: 50px;
 }
