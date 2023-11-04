@@ -1,7 +1,9 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable no-console */
 import React, { useState } from "react";
 import "../styles/add-property.css";
+import axios from "axios";
 
 const AddProperty = () => {
   const initialState = {
@@ -14,13 +16,36 @@ const AddProperty = () => {
       city: "",
       email: "",
     },
+
+    alert: {
+      message: "",
+      isSuccess: false,
+    },
   };
 
   const [fields, setFields] = useState(initialState.fields);
+  const [alert, setAlert] = useState(initialState.alert);
 
   const handleAddProperty = (event) => {
     event.preventDefault();
     console.log(fields);
+    setAlert({ message: "", isSuccess: false });
+
+    axios
+      .post(`http://localhost:3000/api/v1/PropertyListing`, fields)
+      .then(() =>
+        // console.log("Poperty Added"));
+        setAlert({
+          message: "Property Added",
+          isSuccess: true,
+        })
+      )
+      .catch(() =>
+        setAlert({
+          message: "Server error. Please try again later.",
+          isSuccess: false,
+        })
+      );
   };
 
   const handleFieldChange = (event) => {
