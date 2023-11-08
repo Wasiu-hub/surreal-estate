@@ -2,19 +2,19 @@
 /* eslint-disable jsx-a11y/control-has-associated-label */
 /* eslint-disable no-console */
 import React, { useState } from "react";
-import "../styles/add-property.css";
 import axios from "axios";
+import "../styles/add-property.css";
 import Alert from "./Alert";
 
 const AddProperty = () => {
   const initialState = {
     fields: {
       title: "",
-      type: "",
+      type: "Flat",
       bedroom: "",
       bathroom: "",
       price: "",
-      city: "",
+      city: "Manchester",
       email: "",
     },
 
@@ -61,7 +61,7 @@ const AddProperty = () => {
         <label htmlFor="title">
           Property Title
           <input
-            placeholder="How many bedroom(s)"
+            placeholder="Detached"
             id="title"
             name="title"
             value={fields.title}
@@ -105,7 +105,7 @@ const AddProperty = () => {
         <label htmlFor="bedrooms">
           Bedrooms
           <input
-            placeholder=""
+            placeholder="2"
             id="bedroom"
             name="bedroom"
             value={fields.bedroom}
@@ -116,7 +116,7 @@ const AddProperty = () => {
         <label htmlFor="bathrooms">
           Bathrooms
           <input
-            placeholder=""
+            placeholder="1"
             id="bathroom"
             name="bathroom"
             value={fields.bathroom}
@@ -138,7 +138,7 @@ const AddProperty = () => {
         <label htmlFor="email">
           Email
           <input
-            placeholder="was@yahoo.com"
+            placeholder="enter email address"
             id="email"
             name="email"
             value={fields.email}
